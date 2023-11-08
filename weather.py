@@ -23,7 +23,7 @@ l_city=[                                                            #list of fav
 ]      
 def autorefresh(city,api,t): #function for auto refreshing the weather_forcast fuction
     while True:
-        if (int((datetime.now().time().strftime("%S")))- int(t) > 30):
+        if (int((datetime.now().time().strftime("%S")))- int(t) > 9):
             if (os.name=="nt"):
                 os.system("cls")
                 print("Refreshed......\n")
@@ -59,7 +59,7 @@ def mainmenu():
     print("\nTo display the weather")
     while True:
         print("Choose any one from the following options\n1->city of your choice\n2->Cities from favourate list\n3->exit")
-        i=int(input("Enter your Choice"))
+        i=int(input("Enter your Choice: "))
         if(i==1):
             print("autorefresh mode is set to on")
             city=input("Enter city name in the format (city,country)\nAns:")
